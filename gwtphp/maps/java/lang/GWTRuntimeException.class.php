@@ -22,11 +22,14 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
+ 
+/**
+ * @package gwtphp.maps.java.lang
+ */
+class GWTRuntimeException extends SerializableException {
 
-class RuntimeException extends SerializableException {
-
-	public __construct($message = null, $cause = null){
-		parent::__construct($s, $cause);
+	public function __construct($message = null, $cause = null){
+		parent::__construct($message, $cause);
 	}
 	
 }

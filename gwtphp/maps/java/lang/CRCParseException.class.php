@@ -1,5 +1,4 @@
 <?php
-
 /*
  * GWTPHP is a port to PHP of the GWT RPC package.
  * 
@@ -7,7 +6,8 @@
  * <p>Design, strategies and part of the methods documentation are developed by Google Team  </p>
  * 
  * <p>PHP port, extensions and modifications by Rafal M.Malinowski. All rights reserved.<br>
- * For more information, please see {@link http://gwtphp.sourceforge.com/}.</p>
+ * Additional modifications, GWT generators and linkers by Yifei Teng. All rights reserved.<br>
+ * For more information, please see {@link https://github.com/tengyifei/gwtphp}</p>
  * 
  * 
  * <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -24,41 +24,9 @@
  */
 
 /**
- * @package gwtphp.maps.com.google.gwt.user.client.rpc
+ * @package gwtphp.maps.java.lang
  */
-class SerializableException extends Exception implements IsSerializable {
-	
-	
-	/**
-	 * 
-	 * @var String
-	 */
-	protected $message;
-	
-	
-	public function __construct($message = null, $cause = null) {
-		parent::__construct($message, 0);	//PHP Exception does not support cause
-		$this->message = $message;
-	}
-	
-	/**	 
-	 *
-	 * @param String $msg
-	 * @return void
-	 */
-	public function setMessage($message) {
-		$this->message = $message;
-	}
-	
-	/** 
-	 *
-	 * @return String
-	
-	public function getMessage() {
-		return $this->$message;
-	}
-	 */	
-	
+class CRCParseException extends RuntimeException {
 }
 
 ?>
