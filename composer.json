@@ -1,5 +1,5 @@
 {
-    "name": "Gwtphp/gwtphp",
+    "name": "gwtphp/gwtphp",
     "type": "library",
     "description": "The Google Web Toolkit RPC protocol server-side application, implemented in PHP. Strives to be a drop-in replacement.",
     "keywords": ["gwt", "php", "rpc", "gwtphp"],
