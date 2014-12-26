@@ -46,24 +46,17 @@ require_once(GWTPHP_DIR.'/helpers/SimpleRPCTargetResolverStrategy.class.php');
  */
 class RemoteServiceServlet implements SerializationPolicyProvider  {
 
-    private static /*final*/ $GENERIC_FAILURE_MSG = "The call failed on the server; see server log for details";
+    protected static /*final*/ $GENERIC_FAILURE_MSG = "The call failed on the server; see server log for details";
 
     /**
      *
      * @var Logger
      */
     private $logger;
-
+    
     /**
      *
-     * @var RPCResolver
-     * @deprecated
-     */
-    //private $rpcResolver;
-
-    /**
-     *
-  fdsasdfasd mk lh /lbg   * @var MappedClassLoader
+     * @var MappedClassLoader
      */
     private $mappedClassLoader;
 
@@ -230,7 +223,7 @@ class RemoteServiceServlet implements SerializationPolicyProvider  {
      * Write the response payload to the response stream.
      * @param String $responsePayload
      */
-    private function writeResponse($responsePayload) {
+    protected function writeResponse($responsePayload) {
         header('Content-Type: text/html; charset=utf-8',true);
         header('Cache-Control: no-cache, no-store, max-age=0, must-revalidate',true);
         header('Expires: Mon, 26 Jul 1997 05:00:00 GMT',true); // Date in the past
@@ -287,7 +280,7 @@ class RemoteServiceServlet implements SerializationPolicyProvider  {
      * the invoked third-party method. It writes a simple 500 message back to the
      * client.
      */
-    private function respondWithFailure() {
+    protected function respondWithFailure() {
         //gwtphp.done
         header('Content-Type: text/html; charset=utf-8');
         header("HTTP/1.1 500 Internal Server Error");
